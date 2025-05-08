@@ -6,10 +6,48 @@ asynchronous code and the event loop
 
 
 1. How the web works?
-User/Client(browser) -----entering http://mypage.com ------[Domain Lookup]----client send request to Server[at some ip address] -- Our code to spin up server[nodejs, php, asp.net]
+User/Client(browser) 
+-- entering http://mypage.com 
+-- [Domain Lookup]
+-- client send request to Server[at some ip address] 
+-- Our code to spin up server[nodejs, php, asp.net]
+-- Response sent from server[may be html, includes header footer in res object]
+
 
 HTTPS: has ssl encryption
 
 app.js ->main file
 
-core modules
+CORE MODULES 
+// http https fs path
+
+LIFECYCLE
+//server in nodejs uses only one thread it uses event loop concept which is always available
+//super fast in handling multiple requests
+// in background uses multiple threads
+//create server creates a server which do not end. Ends on process.exit -> hard exits the process
+
+UNDERSTANDING REQUESTS
+//req is request object
+//contains header- metadata
+//interesting fields-> req.url, req.method, req.headers
+//url is everything after localhost:3000/(...)
+
+SENDING RESPONSE
+// inspect - network[all] - localhost/test - headers
+
+REQUEST AND RESPONSE HEADERS
+// https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers
+
+
+
+
+
+
+
+
+
+
+
+
+

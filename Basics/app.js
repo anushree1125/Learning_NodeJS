@@ -13,6 +13,17 @@ const { serialize } = require("v8");
 // Using arrow function: callback function
 const server = http.createServer((req, res) => {
   console.log(req);
+  console.log("===================================");
+
+  //process.exit(); // quitting the server
+  console.log(req.method, req.headers, req.url);
+  res.setHeader("Content-Type", "text/html");
+  res.write("<html>");
+  res.write("<head><title>My first page</title></head>");
+  res.write("<body>Hello from nodejs server</body>");
+  res.write("</html>");
+  res.end();
+  // we should not change response after ending it-- res.write() leads to error
 });
 // to run type [node app.js] in terminal
 
