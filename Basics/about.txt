@@ -1,0 +1,15 @@
+How does the web work(refresher)?
+creating node.js server
+Using node core modules
+working with requests and responses(basics)
+asynchronous code and the event loop
+
+
+1. How the web works?
+User/Client(browser) -----entering http://mypage.com ------[Domain Lookup]----client send request to Server[at some ip address] -- Our code to spin up server[nodejs, php, asp.net]
+
+HTTPS: has ssl encryption
+
+app.js ->main file
+
+core modules
